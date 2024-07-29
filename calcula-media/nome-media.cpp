@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <string.h>
 
 int main (int argc, char *argv[])
 {
 	setlocale (LC_ALL, "Portuguese");
-	char nome;
+	char nome [15];
 	float nota1,nota2,media;
 	
 	printf(" #### PORTAL DO ALUNO ####\n\n");
@@ -24,14 +25,15 @@ int main (int argc, char *argv[])
 	printf(" #### PORTAL DO ALUNO ####\n\n");
 	
 	media = (nota1+nota2)/2; // cálculo da nota dividido por 2 = média 
+	printf("Aluno(a): %s\n", &nome);
 	printf("Nota média do semestre:%2.f\n",media); // média
-	
+		
 	if (media<=5){
-		printf("Aluno(a) Reprovado\n\n");	
+		printf("\nAluno(a) Reprovado!!\n\n");	
 	}
 	
 	else{
-		printf("Aluno(a) Aprovado\n\n");		
+		printf("\nAluno(a) Aprovado!!\n\n");		
 	}
 
 	system("pause");

@@ -43,6 +43,7 @@ int main (int argc, char *argv[]){
 		break;
 		
 		default:
+		printf("#### CONVERSOR DE MOEDA ####\n\n\n");
 		printf("Essa opção não está disponível!\n"); // fim da seleção
 		system("pause");
 		break;

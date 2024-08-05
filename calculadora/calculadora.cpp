@@ -60,6 +60,7 @@ int main (int argc, char *argv[]){  // evoluindo em switch case, projeto simples
 		break;
 
 		default:
+		printf("#### CALCULADORA ####\n\n");
 		printf("Essa opção não está disponível!\n\n"); // fim da seleção
 		system("pause");
 		break;

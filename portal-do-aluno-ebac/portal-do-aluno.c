@@ -136,53 +136,71 @@ int deletar(){
 
 int main(){
 	int opcao=0; // definindo variáveis
-	int x=1;
+	int laco=1;
+	char senhadigitada[] ="a";
+	int comparacao;
 	
-	for(x=1;x=1;){ //x = laço de repetição
+	printf("####-------------------------####\n"); // inicio do menu
+	printf("\tPORTAL DO ALUNO\n\n");
+	printf("Login de administrador!\n\nDigite sua senha: ");
+	scanf("%s",senhadigitada);
 	
-		setlocale (LC_ALL, "Portuguese"); // definindo linguagem
+	comparacao = strcmp(senhadigitada, "admin");
 	
-		printf("####-------------------------####\n"); // inicio do menu
-		printf("\tPORTAL DO ALUNO\n\n");
-		printf("Escolha a opção desejada do menu:\n");
-		printf("\t1: Registar nomes\n");
-		printf("\t2: Consultar nomes\n");	
-		printf("\t3: Deletar nomes\n"); 
-		printf("\t4: Sair do sistema\n\n");
-		printf("Opção desejada: "); // fim do menu
+	if(comparacao == 0){
+		system ("cls");
+		
 	
-		scanf("%d", &opcao); // armazenando a escolha do usuário
+		for(laco=1;laco=1;){ //x = laço de repetição
 	
-		system("cls");
+				setlocale (LC_ALL, "Portuguese"); // definindo linguagem
 	
-		switch(opcao){
-			case 1: 
-			registro();
-			break;
+				printf("####-------------------------####\n"); // inicio do menu
+				printf("\tPORTAL DO ALUNO\n\n");
+				printf("Escolha a opção desejada do menu:\n");
+				printf("\t1: Registar nomes\n");
+				printf("\t2: Consultar nomes\n");	
+				printf("\t3: Deletar nomes\n"); 
+				printf("\t4: Sair do sistema\n\n");
+				printf("Opção desejada: "); // fim do menu
+	
+					scanf("%d", &opcao); // armazenando a escolha do usuário
+	
+					system("cls");
+	
+					switch(opcao){
+					case 1: 
+					registro();
+					break;
 			
-			case 2:
-			consulta();
-			break;
+					case 2:
+					consulta();
+					break;
 			
-			case 3:
-			deletar ();
-			break;
+					case 3:
+					deletar ();
+					break;
 			
-			case 4:
-			printf("####-------------------------####\n"); // inicio do menu
+					case 4:
+					printf("####-------------------------####\n"); // inicio do menu
+					printf("\tPORTAL DO ALUNO\n\n");
+					printf("Obrigado por utilizar o sistema!\n");
+					return 0;
+					break;	
+			
+					default:
+					printf("####-------------------------####\n"); // inicio do menu
+					printf("\tPORTAL DO ALUNO\n\n");
+					printf("Essa opção não está disponível!\n\n"); // fim da seleção
+					system("pause");
+					break;	
+			
+					}		
+				}			
+			}
+				else
+				system ("cls");
+			printf("####-------------------------####\n"); 
 			printf("\tPORTAL DO ALUNO\n\n");
-			printf("Obrigado por utilizar o sistema!\n");
-			return 0;
-			break;	
-			
-			default:
-			printf("####-------------------------####\n"); // inicio do menu
-			printf("\tPORTAL DO ALUNO\n\n");
-			printf("Essa opção não está disponível!\n\n"); // fim da seleção
-			system("pause");
-			break;			
-		}			
-		}	
-}
-
-
+			printf("Senha incorreta!");
+}	

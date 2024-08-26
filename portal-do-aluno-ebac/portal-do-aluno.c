@@ -73,11 +73,13 @@ int consulta(){
 	
 	printf("####-------------------------####\n");
 	printf("\tPORTAL DO ALUNO\n\n");
-	printf("Digite o CPF a ser consultado: ");
+	printf("Digite o CPF a ser consultado: "); // recebendo qual usuário vai ser consultado
 	scanf("%s",cpf);
 
+	system ("cls");
+
 	FILE *file;
-	file = fopen(cpf,"r");
+	file = fopen(cpf,"r"); // r = lendo arquivo
 	
 	if(file == 	NULL){
 		printf("####-------------------------####\n");
@@ -154,7 +156,8 @@ int main(){
 		for(laco=1;laco=1;){ //x = laço de repetição
 	
 				setlocale (LC_ALL, "Portuguese"); // definindo linguagem
-	
+				
+				system ("cls");
 				printf("####-------------------------####\n"); // inicio do menu
 				printf("\tPORTAL DO ALUNO\n\n");
 				printf("Escolha a opção desejada do menu:\n");

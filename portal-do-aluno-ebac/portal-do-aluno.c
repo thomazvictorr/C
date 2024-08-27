@@ -104,6 +104,8 @@ int consulta(){
 		
 		token = strtok(NULL, ",");
 		printf("Curso: %s\n\n", token);
+	
+	fclose(file); // fechando o arquivo na função
 			
 	system("pause");
 	}
